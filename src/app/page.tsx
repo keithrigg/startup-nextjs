@@ -12,8 +12,8 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Inovize: Intelligent Automation Specialists",
+  description: "Inovize is a leading provider of intelligent automation solutions. We help businesses automate their processes and improve efficiency.",
   // other metadata
 };
 
@@ -24,11 +24,11 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
+      {/*<Brands />*/}
+      {/*<AboutSectionOne />*/}
+      {/*<AboutSectionTwo />*/}
+      {/*<Testimonials />*/}
+      {/*<Pricing />*/}
       <Blog />
       <Contact />
     </>

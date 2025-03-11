@@ -13,19 +13,19 @@ const menuData: Menu[] = [
     path: "/about",
     newTab: false,
   },
-  {
+/*  {
     id: 33,
     title: "Blog",
     path: "/blog",
     newTab: false,
-  },
+  }, */
   {
     id: 3,
     title: "Support",
     path: "/contact",
     newTab: false,
   },
-  {
+/*  {
     id: 4,
     title: "Pages",
     newTab: false,
@@ -77,8 +77,8 @@ const menuData: Menu[] = [
         title: "Error Page",
         path: "/error",
         newTab: false,
-      },
+      }, 
     ],
-  },
+  }, */
 ];
 export default menuData;

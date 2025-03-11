@@ -12,47 +12,26 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="/images/logo/logo-2.svg"
+                    src="/images/logo/inovize_device+logo_reverse.png"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
                     height={30}
                   />
                   <Image
-                    src="/images/logo/logo.svg"
+                    src="/images/logo/inovize_device+logo_reverse.png"
                     alt="logo"
                     className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
+                    width={130}
+                    height={20}
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
+                  Specialists in Intelligent Automation Solutions
                 </p>
                 <div className="flex items-center">
                   <a
-                    href="/"
-                    aria-label="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 22 22"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12.1 10.4939V7.42705C12.1 6.23984 13.085 5.27741 14.3 5.27741H16.5V2.05296L13.5135 1.84452C10.9664 1.66676 8.8 3.63781 8.8 6.13287V10.4939H5.5V13.7183H8.8V20.1667H12.1V13.7183H15.4L16.5 10.4939H12.1Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="/"
+                    href="https://x.com/inovize"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -86,7 +65,7 @@ const Footer = () => {
                       viewBox="0 0 18 14"
                       className="fill-current"
                     >
-                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 7.26191e-08 9.0627 0 9.0627 0C9.0627 0 3.54766 7.26191e-08 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
+                      <path d="M17.5058 2.07119C17.3068 1.2488 16.7099 0.609173 15.9423 0.395963C14.5778 0 9.0627 0 9.0627 0C9.0627 0 3.54766 0 2.18311 0.395963C1.41555 0.609173 0.818561 1.2488 0.619565 2.07119C0.25 3.56366 0.25 6.60953 0.25 6.60953C0.25 6.60953 0.25 9.68585 0.619565 11.1479C0.818561 11.9703 1.41555 12.6099 2.18311 12.8231C3.54766 13.2191 9.0627 13.2191 9.0627 13.2191C9.0627 13.2191 14.5778 13.2191 15.9423 12.8231C16.7099 12.6099 17.3068 11.9703 17.5058 11.1479C17.8754 9.68585 17.8754 6.60953 17.8754 6.60953C17.8754 6.60953 17.8754 3.56366 17.5058 2.07119ZM7.30016 9.44218V3.77687L11.8771 6.60953L7.30016 9.44218Z" />
                     </svg>
                   </a>
                   <a
@@ -212,30 +191,35 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Template by{" "}
-              <a
-                href="http://uideck.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                UIdeck
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://nextjstemplates.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                Next.js Templates
-              </a>
-            </p>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]" />
+
+          {/* Footer bottom area */}
+          <div className="py-8 flex flex-col gap-4 items-start sm:flex-row sm:justify-between sm:items-center">
+            {/* Inovize company details - shorter text, max width */}
+            <div className="text-sm text-body-color dark:text-body-color-dark max-w-xl leading-relaxed">
+              Inovize Solutions Ltd (trading as “Inovize”), registered in England & Wales (No. 16214067). 
+              Registered office: 20 Wenlock Road, London, England, N1 7GU.
+            </div>
+
+            {/* Copyright */}
+            <div className="text-right text-sm text-body-color dark:text-body-color-dark">
+              <p>
+                © 2025{" "}
+                <a
+                  href="https://www.inovize.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  Inovize
+                </a>
+              </p>
+              <p>All rights reserved.</p>
+            </div>
           </div>
         </div>
+
+        {/* Background decorative elements */}
         <div className="absolute right-0 top-14 z-[-1]">
           <svg
             width="55"
