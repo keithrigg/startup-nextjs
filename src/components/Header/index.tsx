@@ -57,8 +57,9 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
-                  alt="logo"
+                  //src="/images/logo/logo-2.svg"
+                  src="/images/logo/inovize_device+logo_colour.png"
+                  alt="inovize logo - colour"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
@@ -66,7 +67,7 @@ const Header = () => {
                 <Image
                   //src="/images/logo/logo.svg"
                   src="/images/logo/inovize_device+logo_reverse.png"
-                  alt="logo"
+                  alt="inovize logo - reverse"
                   width={250}
                   height={100}
                   className="hidden dark:block"

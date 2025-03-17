@@ -12,7 +12,7 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="/images/logo/inovize_device+logo_reverse.png"
+                    src="/images/logo/inovize_device+logo_colour.png"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
