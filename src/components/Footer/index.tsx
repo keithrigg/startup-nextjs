@@ -196,11 +196,12 @@ const Footer = () => {
           {/* Footer bottom area */}
           <div className="py-8 flex flex-col gap-4 items-start sm:flex-row sm:justify-between sm:items-center">
             {/* Inovize company details - shorter text, max width */}
-            <div className="text-sm text-body-color dark:text-body-color-dark max-w-xl leading-relaxed">
-              Inovize Solutions Ltd (trading as “Inovize”), registered in England & Wales (No. 16214067). 
-              Registered office: 20 Wenlock Road, London, England, N1 7GU.
+            <div className="text-sm text-body-color dark:text-body-color-dark max-w-xxl leading-relaxed">
+              <p>
+                Inovize Solutions Ltd (trading as “Inovize”), registered in England &amp; Wales (No. 16214067).
+              </p>
+              <p>Registered office: 20 Wenlock Road, London, England, N1 7GU.</p>
             </div>
-
             {/* Copyright */}
             <div className="text-right text-sm text-body-color dark:text-body-color-dark">
               <p>
@@ -214,7 +215,7 @@ const Footer = () => {
                   Inovize
                 </a>
               </p>
-              <p>All rights reserved.</p>
+              <p>All rights reserved</p>
             </div>
           </div>
         </div>
