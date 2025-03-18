@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import NewsLatterBox from "./NewsLatterBox";
 
 // If you prefer, store sitekey in NEXT_PUBLIC_TURNSTILE_SITE_KEY
-const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAABAUl8hGWVHAUlbw";
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 // Define the available pillars
 const AVAILABLE_PILLARS = [
