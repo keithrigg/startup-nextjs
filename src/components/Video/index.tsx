@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
+import ModalVideo from "react-modal-video";
 import SectionTitle from "../Common/SectionTitle";
 
-import ModalVideo from "react-modal-video";
+import { brandColors } from "@/lib/brandColors";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
@@ -21,10 +22,7 @@ const Video = () => {
 
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div
-              className="mx-auto max-w-[770px] overflow-hidden rounded-md"
-              data-wow-delay=".15s"
-            >
+            <div className="mx-auto max-w-[770px] overflow-hidden rounded-md" data-wow-delay=".15s">
               <div className="relative aspect-[77/40] items-center justify-center">
                 <Image src="/images/video/video.jpg" alt="video image" fill />
                 <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
@@ -33,12 +31,7 @@ const Video = () => {
                     onClick={() => setOpen(true)}
                     className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
                   >
-                    <svg
-                      width="16"
-                      height="18"
-                      viewBox="0 0 16 18"
-                      className="fill-current"
-                    >
+                    <svg width="16" height="18" viewBox="0 0 16 18" className="fill-current">
                       <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
                     </svg>
                   </button>
@@ -49,6 +42,7 @@ const Video = () => {
         </div>
       </div>
 
+      {/* ModalVideo */}
       <ModalVideo
         channel="youtube"
         autoplay={true}
@@ -58,7 +52,62 @@ const Video = () => {
         onClose={() => setOpen(false)}
       />
 
-      <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
+      {/* Inline SVG instead of background image */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-[-1] h-full w-full overflow-hidden">
+        <svg
+          fill="none"
+          width="1440"
+          height="563"
+          viewBox="0 0 1440 563"
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-full w-full object-cover"
+        >
+          <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="720" x2="720" y1="1" y2="562">
+            <stop offset="0" stopColor={brandColors.inovize_red} stopOpacity="0" />
+            <stop offset="1" stopColor={brandColors.inovize_red} />
+          </linearGradient>
+          <linearGradient id="b">
+            <stop offset="0" stopColor={brandColors.inovize_red} stopOpacity=".5" />
+            <stop offset="1" stopColor="#2441b6" stopOpacity="0" />
+          </linearGradient>
+          <linearGradient
+            id="c"
+            gradientUnits="userSpaceOnUse"
+            x1="-18.9868"
+            x2="202.082"
+            xlinkHref="#b"
+            y1="176.5"
+            y2="533.363"
+          />
+          <linearGradient
+            id="d"
+            gradientUnits="userSpaceOnUse"
+            x1="276.308"
+            x2="430.232"
+            xlinkHref="#b"
+            y1="609"
+            y2="334.49"
+          />
+          <linearGradient
+            id="e"
+            gradientUnits="userSpaceOnUse"
+            x1="1080.2"
+            x2="1132.87"
+            y1="121.062"
+            y2="340.496"
+          >
+            <stop offset="0" stopColor={brandColors.inovize_red} stopOpacity=".31" />
+            <stop offset="1" stopColor="#2441b6" stopOpacity="0" />
+          </linearGradient>
+          <path
+            d="m0 87 263.536 174 659.834-260 516.63 224.5m0 76.5-466.409-63.5-696.63 323.5-276.961-187"
+            stroke="url(#a)"
+          />
+          <path d="m276.808 561.5-12.991-300.5-263.817-174v288z" fill="url(#c)" />
+          <path d="m339.764 231-75.947 30 12.991 301 272.81-127z" fill="url(#d)" />
+          <path d="m1439 225-335.77-146v177l335.77 46z" fill="url(#e)" />
+        </svg>
+      </div>
     </section>
   );
 };
