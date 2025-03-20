@@ -42,6 +42,12 @@ const menuData: Menu[] = [
         path: "/cookie",
         newTab: false,
       },
+      {
+        id: 43,
+        title: "Terms of Use",
+        path: "/terms",
+        newTab: false,
+      },
     ],
   },
 ];
