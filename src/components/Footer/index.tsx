@@ -1,55 +1,46 @@
 "use client";
 
-import {
-  useState,
-  useEffect,
-  forwardRef,
-  ForwardRefRenderFunction
-} from "react";
+import { forwardRef, useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
 interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
 
-const FooterBase: ForwardRefRenderFunction<HTMLElement, FooterProps> = (
-  props,
-  ref
-) => {
-  // Theme detection & mounted check
+const FooterBase = forwardRef<HTMLElement, FooterProps>(({ ...props }, ref) => {
   const { theme, systemTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
 
+  // ✅ Add `mounted` state to prevent hydration issues
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-
-  // If not mounted yet, return a placeholder to avoid mismatch
-  if (!mounted) return null;
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
-    // Attach the forwarded ref to the main <footer> element
     <footer ref={ref} {...props} className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           {/* Left column */}
           <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
             <div className="mb-12 max-w-[360px] lg:mb-16">
-              <Link href="/" className="mb-8 inline-block">
-                {currentTheme === "dark" ? (
-                  <img
-                    src="/images/logo/inovize_device+logo_reverse.png"
-                    alt="Inovize logo (dark mode)"
-                    width={250}
-                    height={50}
-                  />
-                ) : (
-                  <img
-                    src="/images/logo/inovize_device+logo_colour.png"
-                    alt="Inovize logo (light mode)"
-                    width={250}
-                    height={50}
-                  />
-                )}
-              </Link>
+            <Link href="/" className="mb-8 inline-block">
+              {mounted && currentTheme === "dark" ? (
+                <img
+                  src="/images/logo/inovize_device+logo_reverse.png"
+                  alt="Inovize logo (dark mode)"
+                  width={250}
+                  height={50}
+                />
+              ) : (
+                <img
+                  src="/images/logo/inovize_device+logo_colour.png"
+                  alt="Inovize logo (light mode)"
+                  width={250}
+                  height={50}
+                />
+              )}
+            </Link>
               <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
                 Specialists in Intelligent Automation Solutions
               </p>
@@ -231,9 +222,9 @@ const FooterBase: ForwardRefRenderFunction<HTMLElement, FooterProps> = (
       </div>
     </footer>
   );
-};
+});
 
-export const Footer = forwardRef<HTMLDivElement, FooterProps>(FooterBase);
-Footer.displayName = "Footer";
+// 2️⃣ Ensure Next.js doesn't throw a warning
+FooterBase.displayName = "Footer";
 
-export default Footer;
+export default FooterBase;

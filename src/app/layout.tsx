@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -13,18 +13,21 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  // 1. Create a ref to pass to the Footer.
-  const footerRef = useRef<HTMLDivElement>(null);
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // 1️⃣ Ensure footerRef is initialized correctly
+  const footerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (footerRef.current) {
+      console.log("Footer ref after mount:", footerRef.current);
+    } else {
+      console.warn("Footer ref is still null on mount.");
+    }
+  }, []);
 
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        {/* Turnstile script with ?onload=turnstileReady */}
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=turnstileReady"
           async
@@ -32,7 +35,6 @@ export default function RootLayout({
         />
         <Script id="turnstile-global">
           {`
-            // This function is called once the Turnstile script is loaded
             window.turnstileReady = function() {
               console.log("Turnstile script loaded. You can now call turnstile.render(...)");
             };
@@ -45,12 +47,12 @@ export default function RootLayout({
           <Header />
           {children}
 
-          {/* 2. Pass the ref to Footer so we can observe it. */}
+          {/* 2️⃣ Ensure `ref` is passed to Footer */}
           <Footer ref={footerRef} />
 
           <ScrollToTop />
 
-          {/* 3. Pass the same ref to CookieBanner */}
+          {/* 3️⃣ Ensure `footerRef` is passed to CookieBanner */}
           <CookieBanner footerRef={footerRef} />
         </Providers>
       </body>
