@@ -38,15 +38,15 @@ export async function POST(req: Request) {
       from: "website@inovize.com",
       subject: `New Contact from ${name}`,
       text: `
-Name: ${name}
-Email: ${email}
-Company: ${company || "(Not provided)"}
-Phone: ${phone || "(Not provided)"}
-Pillars of Interest: ${Array.isArray(pillars) && pillars.length > 0 ? pillars.join(", ") : "(None selected)"}
+            Name: ${name}
+            Email: ${email}
+            Company: ${company || "(Not provided)"}
+            Phone: ${phone || "(Not provided)"}
+            Pillars of Interest: ${Array.isArray(pillars) && pillars.length > 0 ? pillars.join(", ") : "(None selected)"}
 
-Message:
-${message}
-`,
+            Message:
+            ${message}
+            `,
     };
 
     try {
