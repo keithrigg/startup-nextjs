@@ -1,9 +1,11 @@
 "use client";
 
+import { useRef } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Providers } from "./providers";
+import CookieBanner from "@/components/Cookie/CookieBanner";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
@@ -16,12 +18,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // 1. Create a ref to pass to the Footer.
+  const footerRef = useRef<HTMLDivElement>(null);
+
   return (
     <html suppressHydrationWarning lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent head.js.
-        More info: https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head>
         {/* Turnstile script with ?onload=turnstileReady */}
         <Script
@@ -29,10 +30,6 @@ export default function RootLayout({
           async
           defer
         />
-        {/*
-          We'll define the global turnstileReady function in another Script
-          so it’s available after the main script loads.
-        */}
         <Script id="turnstile-global">
           {`
             // This function is called once the Turnstile script is loaded
@@ -47,8 +44,14 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
-          <Footer />
+
+          {/* 2. Pass the ref to Footer so we can observe it. */}
+          <Footer ref={footerRef} />
+
           <ScrollToTop />
+
+          {/* 3. Pass the same ref to CookieBanner */}
+          <CookieBanner footerRef={footerRef} />
         </Providers>
       </body>
     </html>
