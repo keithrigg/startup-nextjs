@@ -83,7 +83,7 @@ const PrivacyPolicy = () => {
                 <ul className="mb-6 list-disc pl-5 text-base leading-relaxed text-body-color">
                   <li>Right of access</li>
                   <li>Right to rectification</li>
-                  <li>Right to erasure (&quot;right to be forgotten&quot;)</li>
+                  <li>Right to erasure (&#34;right to be forgotten&#34;)</li>
                   <li>Right to restrict processing</li>
                   <li>Right to object to processing</li>
                   <li>Right to data portability</li>
@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
                 </ul>
                 <p className="mb-6 text-base leading-relaxed text-body-color">
                   To exercise any of these rights or request information, please contact us at{" "}
-                  <a href="mailto:privacy@inovize.co.uk" className="text-primary hover:underline">privacy@inovize.co.uk</a>.
+                  <a href="mailto:privacy@inovize.com" className="text-primary hover:underline">privacy@inovize.com</a>.
                 </p>
 
                 <h3 className="mb-4 text-xl font-semibold text-black dark:text-white">
@@ -108,7 +108,7 @@ const PrivacyPolicy = () => {
                   <br />
                   20 Wenlock Road, London, N1 7GU, United Kingdom
                   <br />
-                  <a href="mailto:privacy@inovize.co.uk" className="text-primary hover:underline">privacy@inovize.co.uk</a>
+                  <a href="mailto:privacy@inovize.com" className="text-primary hover:underline">privacy@inovize.com</a>
                 </p>
                 <p className="text-base leading-relaxed text-body-color">
                   If you have unresolved concerns, you can contact the

@@ -14,8 +14,8 @@ const TermsOfUse = () => {
               />
               <div data-wow-delay=".15s" className="mb-12">
                 <p className="mb-6 text-base leading-relaxed text-body-color">
-                  Welcome to Inovize Solutions Ltd (&quot;Inovize,&quot; &quot;we,&quot; &quot;our,&quot; &quot;us&quot;).
-                  By accessing and using our website (the &quot;Site&quot;), you agree to
+                  Welcome to Inovize Solutions Ltd (&#34;Inovize,&#34; &#34;we,&#34; &#34;our,&#34; &#34;us&#34;).
+                  By accessing and using our website (the &#34;Site&#34;), you agree to
                   comply with and be bound by these Terms of Use. If you do not
                   agree with any part of these terms, please do not use our Site.
                 </p>
@@ -57,7 +57,7 @@ const TermsOfUse = () => {
                   4. Disclaimers & Limitations of Liability
                 </h3>
                 <p className="mb-6 text-base leading-relaxed text-body-color">
-                  The Site is provided "as is" without warranties of any kind.
+                  The Site is provided &#34;as is&#34; without warranties of any kind.
                   We do not guarantee that the Site will be error-free or
                   uninterrupted. To the fullest extent permitted by law, Inovize
                   disclaims all liability for any damages arising from your use of
@@ -102,8 +102,8 @@ const TermsOfUse = () => {
                   <br />
                   20 Wenlock Road, London, N1 7GU, United Kingdom
                   <br />
-                  <a href="mailto:info@inovize.co.uk" className="text-primary hover:underline">
-                    info@inovize.co.uk
+                  <a href="mailto:info@inovize.com" className="text-primary hover:underline">
+                    info@inovize.com
                   </a>
                 </p>
               </div>

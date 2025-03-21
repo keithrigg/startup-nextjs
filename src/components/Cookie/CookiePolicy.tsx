@@ -19,7 +19,7 @@ const CookiePolicy = () => {
                 {/* Introduction */}
                 <p className="mb-6">
                   This Cookie Policy explains how Inovize Solutions Ltd
-                  (&quot;Inovize,&quot; &quot;we,&quot; &quot;us,&quot; &quot;our&quot;)
+                  (&#34;Inovize,&#34; &#34;we,&#34; &#34;us,&#34; &#34;our&#34;)
                   uses cookies and similar tracking technologies on our website{" "}
                   <a
                     href="https://www.inovize.com"
@@ -36,7 +36,7 @@ const CookiePolicy = () => {
                   <br />
                   We are committed to upholding your privacy rights and ensuring
                   that any use of cookies complies with guidelines set by
-                  regulatory authorities such as the UK Information Commissioner’s
+                  regulatory authorities such as the UK Information Commissioner&#39;s
                   Office (ICO).
                 </p>
 
@@ -234,7 +234,7 @@ const CookiePolicy = () => {
                 <p className="mb-6">
                   We may update this Cookie Policy to reflect changes in
                   technology, legislation, or our business practices. The
-                  “Effective Date” at the top of this page indicates when this
+                  &#34;Effective Date&#34; at the top of this page indicates when this
                   policy was last revised. We encourage you to review this page
                   periodically to stay informed about our use of cookies.
                 </p>
@@ -254,7 +254,7 @@ const CookiePolicy = () => {
                   <br />
                   20 Wenlock Road, London, N1 7GU, United Kingdom
                   <br />
-                  <a href="mailto:privacy@inovize.co.uk" className="text-primary hover:underline">privacy@inovize.co.uk</a>
+                  <a href="mailto:privacy@inovize.com" className="text-primary hover:underline">privacy@inovize.com</a>
                 </p>
 
                 <p className="mb-6">
