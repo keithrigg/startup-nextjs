@@ -81,7 +81,7 @@ const CookieBanner = ({ footerRef }: CookieBannerProps) => {
         <div className="fixed bottom-0 left-0 z-40 w-full bg-gray-800 px-4 py-2 text-sm text-white">
           <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 sm:flex-row sm:gap-4">
             <p className="flex-1 whitespace-normal sm:whitespace-nowrap">
-              We use cookies to improve user experience. By clicking “Accept,” you
+              We use cookies to improve user experience. By clicking &#34;Accept&#34;, you
               consent to our use of non-essential cookies. For more details, please see our{" "}
               <Link href="/privacy" className="text-primary hover:underline">
                 Privacy Policy
