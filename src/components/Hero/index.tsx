@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 
 import { brandColors } from "@/lib/brandColors";
@@ -95,7 +96,7 @@ const Hero = () => {
             {/* Right Column: Image Placeholder */}
             <div className="w-full px-4 lg:w-1/2">
               <div className="mx-auto max-w-md lg:mr-0">
-                <img
+                <Image
                   src="/images/about/about-image-2-dark.svg"
                   alt="Hero Placeholder"
                   className="w-full h-auto object-cover"

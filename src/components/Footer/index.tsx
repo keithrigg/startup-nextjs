@@ -3,6 +3,7 @@
 import { forwardRef, useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
 
@@ -26,14 +27,14 @@ const FooterBase = forwardRef<HTMLElement, FooterProps>(({ ...props }, ref) => {
             <div className="mb-12 max-w-[360px] lg:mb-16">
             <Link href="/" className="mb-8 inline-block">
               {mounted && currentTheme === "dark" ? (
-                <img
+                <Image
                   src="/images/logo/inovize_device+logo_reverse.png"
                   alt="Inovize logo (dark mode)"
                   width={250}
                   height={50}
                 />
               ) : (
-                <img
+                <Image
                   src="/images/logo/inovize_device+logo_colour.png"
                   alt="Inovize logo (light mode)"
                   width={250}

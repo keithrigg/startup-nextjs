@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
+import { FiSettings } from "react-icons/fi";
 
 const CookiePolicy = () => {
   return (
@@ -9,7 +10,7 @@ const CookiePolicy = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <SectionTitle
-                title="Cookie Policy"
+                title="Inovize Solutions Ltd - Cookie Policy"
                 paragraph="Effective Date: 20 March 2025"
                 mb="44px"
               />
@@ -19,8 +20,16 @@ const CookiePolicy = () => {
                 <p className="mb-6">
                   This Cookie Policy explains how Inovize Solutions Ltd
                   (&quot;Inovize,&quot; &quot;we,&quot; &quot;us,&quot; &quot;our&quot;)
-                  uses cookies and similar tracking technologies on our website
-                  www.inovize.co.uk. It should be read together with our{" "}
+                  uses cookies and similar tracking technologies on our website{" "}
+                  <a
+                    href="https://www.inovize.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    www.inovize.com
+                  </a>
+                  . It should be read together with our{" "}
                   <Link href="/privacy" className="text-primary hover:underline">
                     Privacy Policy
                   </Link>.
@@ -234,19 +243,18 @@ const CookiePolicy = () => {
                 <h3 className="mb-4 text-xl font-semibold text-black dark:text-white">
                   7. Contact Us
                 </h3>
-                <p className="mb-6">
-                  If you have questions about this Cookie Policy or how we use
-                  cookies, please contact us at:
+                <p className="mb-6 text-base leading-relaxed text-body-color">
+                  For any questions regarding this policy or your personal data,
+                  please contact us at:
+                </p>
+                <p className="mb-6 text-base leading-relaxed text-body-color">
+                  Data Protection Officer
                   <br />
-                  Email:{" "}
-                  <a
-                    href="mailto:privacy@inovize.com"
-                    className="text-primary hover:underline"
-                  >
-                    privacy@inovize.com
-                  </a>
+                  Inovize Solutions Ltd
                   <br />
-                  Address: 20 Wenlock Road, London, N1 7GU, United Kingdom
+                  20 Wenlock Road, London, N1 7GU, United Kingdom
+                  <br />
+                  <a href="mailto:privacy@inovize.co.uk" className="text-primary hover:underline">privacy@inovize.co.uk</a>
                 </p>
 
                 <p className="mb-6">

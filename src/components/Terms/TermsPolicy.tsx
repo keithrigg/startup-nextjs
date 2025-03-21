@@ -14,8 +14,8 @@ const TermsOfUse = () => {
               />
               <div data-wow-delay=".15s" className="mb-12">
                 <p className="mb-6 text-base leading-relaxed text-body-color">
-                  Welcome to Inovize Solutions Ltd ("Inovize," "we," "our," "us").
-                  By accessing and using our website (the "Site"), you agree to
+                  Welcome to Inovize Solutions Ltd (&quot;Inovize,&quot; &quot;we,&quot; &quot;our,&quot; &quot;us&quot;).
+                  By accessing and using our website (the &quot;Site&quot;), you agree to
                   comply with and be bound by these Terms of Use. If you do not
                   agree with any part of these terms, please do not use our Site.
                 </p>

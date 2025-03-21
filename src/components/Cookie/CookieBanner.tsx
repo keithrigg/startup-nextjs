@@ -43,7 +43,7 @@ const CookieBanner = ({ footerRef }: CookieBannerProps) => {
     return () => {
       observer.disconnect();
     };
-  }, [footerRef?.current]);
+  }, [footerRef]);
 
   // Accept/Decline handlers
   const handleAccept = () => {

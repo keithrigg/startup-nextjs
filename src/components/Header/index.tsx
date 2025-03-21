@@ -62,14 +62,14 @@ const Header = () => {
                 }`}
               >
                 {currentTheme === "dark" ? (
-                  <img
+                  <Image
                     src="/images/logo/inovize_device+logo_reverse.png"
                     alt="Inovize logo (dark mode)"
                     width={250}
                     height={100}
                   />
                 ) : (
-                  <img
+                  <Image
                     src="/images/logo/inovize_device+logo_colour.png"
                     alt="Inovize logo (light mode)"
                     width={250}
