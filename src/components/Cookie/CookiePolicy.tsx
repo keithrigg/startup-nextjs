@@ -33,7 +33,6 @@ const CookiePolicy = () => {
                   <Link href="/privacy" className="text-primary hover:underline">
                     Privacy Policy
                   </Link>.
-                  <br />
                   We are committed to upholding your privacy rights and ensuring
                   that any use of cookies complies with guidelines set by
                   regulatory authorities such as the UK Information Commissioner&#39;s
