@@ -1,14 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
-
 import { brandColors } from "@/lib/brandColors";
+import List from "@/components/Common/List";
 
 const Hero = () => {
-  const [showCursor, setShowCursor] = useState(true);
+  // Define typewriter words and corresponding bullet points
+  const words = ["Connectivity", "Efficiency", "Insights", "Innovation", "Intelligent Automation"];
+  const bulletPoints = [
+    "Enhance operational efficiency with seamless system connectivity.",
+    "Reduce costs through automated workflows and processes.",
+    "Accelerate time-to-market with rapid application development.",
+    "Drive data-driven decisions with actionable system insights.",
+    "Boost agility by adapting quickly to market changes.",
+    "Unlock growth with AI-powered automation strategies.",
+  ];
 
   return (
     <>
@@ -19,58 +27,45 @@ const Hero = () => {
                    2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
-          {/* Two-column layout for text (left) and image (right) */}
           <div className="flex flex-wrap items-center -mx-4">
             {/* Left Column: Text content */}
-            <div className="w-full px-4 lg:w-1/2">
-              <h1 className="mb-5 text-left text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
-                {/* First Line (Static) */}
-                <div>Specialists in</div>
-
-                {/* Second Line (Typewriter) */}
-                <div>
+            <div className="w-full px-4 lg:w-1/2 mb-8 lg:mb-0">
+              {/* Headline with Typewriter */}
+              <h1 className="mb-5 text-left text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-5xl">
+                Transforming Businesses with{" "}
+                <span className="inline-block">
                   <Typewriter
-                    words={[
-                      "Integration",
-                      "Automation",
-                      "Observability",
-                      "Agentic AI",
-                      "Intelligent Automation",
-                    ]}
-                    loop={1}             // Only run through the list once
-                    cursor={showCursor}  // Bind our cursor state
+                    words={words}
+                    loop={1}
+                    cursor={true}
                     cursorStyle="|"
                     typeSpeed={70}
                     deleteSpeed={50}
                     delaySpeed={1000}
-                    onLoopDone={() => setShowCursor(false)}
                   />
-                </div>
+                </span>
               </h1>
 
-              {/* Paragraph beneath */}
-              <p className="mb-8 text-left text-base !leading-relaxed text-body-color 
-                         dark:text-body-color-dark sm:text-lg md:text-xl"
-              >
-                We are a team of customer-centric, innovative, and passionate
-                technologists. Our mission is to deliver cutting-edge integration
-                and automation solutions that unlock tangible business value,
-                accelerate growth, and transform how organisations operate.
+              {/* Subheadline (static) */}
+              <p className="mb-8 text-left text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                Expert-led consultancy and managed services for iPaaS, API-M, LCAP, Observability, App Dev, and Agentic AI.
+              </p>
+
+              {/* Key Message */}
+              <p className="mb-8 text-left text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                Founded by ex-SaaS technology leaders, we’re passionate about solving complex problems with innovative, customer-centric solutions. Our proven track record and commitment to doing the right thing set us apart.
               </p>
 
               {/* Buttons */}
               <div className="flex flex-wrap items-center space-x-4">
-                {/* LinkedIn Button (external link) */}
+                {/* LinkedIn Button */}
                 <a
                   href="https://www.linkedin.com/company/inovize"
                   aria-label="social-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  //className="inline-flex items-center rounded bg-[#0077B5] px-6 py-3 text-sm font-semibold text-white shadow 
-                  //           hover:bg-[#005C82] transition-colors"
                   className="inline-flex items-center rounded-sm bg-[#0077B5] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#005C82]"
                 >
-                  {/* LinkedIn SVG Icon */}
                   <svg
                     width="17"
                     height="16"
@@ -82,7 +77,7 @@ const Hero = () => {
                   Connect
                 </a>
 
-                {/* Contact Us Button (anchor link to #contact) */}
+                {/* Contact Us Button */}
                 <Link
                   href="#contact"
                   className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
@@ -93,20 +88,29 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right Column: Image Placeholder */}
+            {/* Right Column: Static Bullet Points in Two Columns */}
             <div className="w-full px-4 lg:w-1/2">
               <div className="mx-auto max-w-md lg:mr-0">
-                <Image
-                  src="/images/about/about-image-2-dark.svg"
-                  alt="Hero Placeholder"
-                  className="w-full h-auto object-cover"
-                />
+                <div className="mx-[-12px] flex flex-wrap">
+                  {/* First Column: First 3 items */}
+                  <div className="w-full px-3 sm:w-1/2">
+                    {bulletPoints.slice(0, 3).map((text, index) => (
+                      <List key={index} text={text} />
+                    ))}
+                  </div>
+                  {/* Second Column: Next 3 items */}
+                  <div className="w-full px-3 sm:w-1/2">
+                    {bulletPoints.slice(3).map((text, index) => (
+                      <List key={index + 3} text={text} />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Original background SVGs */}
+        {/* Background SVGs (unchanged) */}
         <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
@@ -115,130 +119,39 @@ const Hero = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle
-              cx="277"
-              cy="63"
-              r="225"
-              fill="url(#paint0_linear_25:217)"
-            />
-            <circle
-              cx="17.9997"
-              cy="182"
-              r="18"
-              fill="url(#paint1_radial_25:217)"
-            />
-            <circle
-              cx="76.9997"
-              cy="288"
-              r="34"
-              fill="url(#paint2_radial_25:217)"
-            />
-            <circle
-              cx="325.486"
-              cy="302.87"
-              r="180"
-              transform="rotate(-37.6852 325.486 302.87)"
-              fill="url(#paint3_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="184.521"
-              cy="315.521"
-              r="132.862"
-              transform="rotate(114.874 184.521 315.521)"
-              stroke="url(#paint4_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="356"
-              cy="290"
-              r="179.5"
-              transform="rotate(-30 356 290)"
-              stroke="url(#paint5_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="191.659"
-              cy="302.659"
-              r="133.362"
-              transform="rotate(133.319 191.659 302.659)"
-              fill="url(#paint6_linear_25:217)"
-            />
+            <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
+            <circle cx="17.9997" cy="182" r="18" fill="url(#paint1_radial_25:217)" />
+            <circle cx="76.9997" cy="288" r="34" fill="url(#paint2_radial_25:217)" />
+            <circle cx="325.486" cy="302.87" r="180" transform="rotate(-37.6852 325.486 302.87)" fill="url(#paint3_linear_25:217)" />
+            <circle opacity="0.8" cx="184.521" cy="315.521" r="132.862" transform="rotate(114.874 184.521 315.521)" stroke="url(#paint4_linear_25:217)" />
+            <circle opacity="0.8" cx="356" cy="290" r="179.5" transform="rotate(-30 356 290)" stroke="url(#paint5_linear_25:217)" />
+            <circle opacity="0.8" cx="191.659" cy="302.659" r="133.362" transform="rotate(133.319 191.659 302.659)" fill="url(#paint6_linear_25:217)" />
             <defs>
-              <linearGradient
-                id="paint0_linear_25:217"
-                x1="-54.5003"
-                y1="-178"
-                x2="222"
-                y2="288"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint0_linear_25:217" x1="-54.5003" y1="-178" x2="222" y2="288" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} />
                 <stop offset="1" stopColor={brandColors.inovize_red} stopOpacity="0" />
               </linearGradient>
-              <radialGradient
-                id="paint1_radial_25:217"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
-              >
+              <radialGradient id="paint1_radial_25:217" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.9997 182) rotate(90) scale(18)">
                 <stop offset="0.145833" stopColor={brandColors.inovize_red} stopOpacity="0" />
                 <stop offset="1" stopColor={brandColors.inovize_red} stopOpacity="0.08" />
               </radialGradient>
-              <radialGradient
-                id="paint2_radial_25:217"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
-              >
+              <radialGradient id="paint2_radial_25:217" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(76.9997 288) rotate(90) scale(34)">
                 <stop offset="0.145833" stopColor={brandColors.inovize_red} stopOpacity="0" />
                 <stop offset="1" stopColor={brandColors.inovize_red} stopOpacity="0.08" />
               </radialGradient>
-              <linearGradient
-                id="paint3_linear_25:217"
-                x1="226.775"
-                y1="-66.1548"
-                x2="292.157"
-                y2="351.421"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint3_linear_25:217" x1="226.775" y1="-66.1548" x2="292.157" y2="351.421" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} />
                 <stop offset="1" stopColor={brandColors.inovize_red} stopOpacity="0" />
               </linearGradient>
-              <linearGradient
-                id="paint4_linear_25:217"
-                x1="184.521"
-                y1="182.159"
-                x2="184.521"
-                y2="448.882"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint4_linear_25:217" x1="184.521" y1="182.159" x2="184.521" y2="448.882" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} />
                 <stop offset="1" stopColor="white" stopOpacity="0" />
               </linearGradient>
-              <linearGradient
-                id="paint5_linear_25:217"
-                x1="356"
-                y1="110"
-                x2="356"
-                y2="470"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint5_linear_25:217" x1="356" y1="110" x2="356" y2="470" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} />
                 <stop offset="1" stopColor="white" stopOpacity="0" />
               </linearGradient>
-              <linearGradient
-                id="paint6_linear_25:217"
-                x1="118.524"
-                y1="29.2497"
-                x2="166.965"
-                y2="338.63"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint6_linear_25:217" x1="118.524" y1="29.2497" x2="166.965" y2="338.63" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} />
                 <stop offset="1" stopColor={brandColors.inovize_red} stopOpacity="0" />
               </linearGradient>
@@ -279,69 +192,27 @@ const Hero = () => {
             />
             <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
             <defs>
-              <linearGradient
-                id="paint0_linear_25:218"
-                x1="184.389"
-                y1="69.2405"
-                x2="184.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint0_linear_25:218" x1="184.389" y1="69.2405" x2="184.389" y2="212.24" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} stopOpacity="0" />
                 <stop offset="1" stopColor={brandColors.inovize_red} />
               </linearGradient>
-              <linearGradient
-                id="paint1_linear_25:218"
-                x1="156.389"
-                y1="69.2405"
-                x2="156.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint1_linear_25:218" x1="156.389" y1="69.2405" x2="156.389" y2="212.24" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} stopOpacity="0" />
                 <stop offset="1" stopColor={brandColors.inovize_red} />
               </linearGradient>
-              <linearGradient
-                id="paint2_linear_25:218"
-                x1="125.389"
-                y1="69.2405"
-                x2="125.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint2_linear_25:218" x1="125.389" y1="69.2405" x2="125.389" y2="212.24" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} stopOpacity="0" />
                 <stop offset="1" stopColor={brandColors.inovize_red} />
               </linearGradient>
-              <linearGradient
-                id="paint3_linear_25:218"
-                x1="93.8507"
-                y1="67.2674"
-                x2="89.9278"
-                y2="210.214"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint3_linear_25:218" x1="93.8507" y1="67.2674" x2="89.9278" y2="210.214" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} stopOpacity="0" />
                 <stop offset="1" stopColor={brandColors.inovize_red} />
               </linearGradient>
-              <linearGradient
-                id="paint4_linear_25:218"
-                x1="214.505"
-                y1="10.2849"
-                x2="212.684"
-                y2="99.5816"
-                gradientUnits="userSpaceOnUse"
-              >
+              <linearGradient id="paint4_linear_25:218" x1="214.505" y1="10.2849" x2="212.684" y2="99.5816" gradientUnits="userSpaceOnUse">
                 <stop stopColor={brandColors.inovize_red} />
                 <stop offset="1" stopColor={brandColors.inovize_red} stopOpacity="0" />
               </linearGradient>
-              <radialGradient
-                id="paint5_radial_25:218"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(220 63) rotate(90) scale(43)"
-              >
+              <radialGradient id="paint5_radial_25:218" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220 63) rotate(90) scale(43)">
                 <stop offset="0.145833" stopColor="white" stopOpacity="0" />
                 <stop offset="1" stopColor="white" stopOpacity="0.08" />
               </radialGradient>
