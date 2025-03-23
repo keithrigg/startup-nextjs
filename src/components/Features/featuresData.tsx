@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
     ),
     title: "iPaaS/Integration",
     paragraph:
-      "Streamline integrations with Integration Platform as a Service (iPaaS), enabling seamless connectivity between disparate systems, applications, and data sources to ensure real-time collaboration and unified workflows across your organization.",
+      "Streamline integrations with Integration Platform as a Service (iPaaS), enabling seamless connectivity between disparate systems, applications, and data sources to ensure real-time collaboration and unified workflows across your organisation.",
   },
   {
     id: 2,

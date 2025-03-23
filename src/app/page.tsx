@@ -10,7 +10,8 @@ import Pricing from "@/components/Pricing";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
-import WhyWorkWithUs from "@/components/WhyUs";
+import WhyUsSectionOne from "@/components/WhyUs/WhyUsSectionOne";
+import WhyUsSectionTwo from "@/components/WhyUs/WhyUsSectionTwo";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,7 +28,8 @@ export default function Home() {
       <Features />
       <Brands />
       <Services />
-      <WhyWorkWithUs />
+      <WhyUsSectionOne />
+      <WhyUsSectionTwo />
       {/*<Video />*/}
       {/*<Brands />*/}
       {/*<AboutSectionOne />*/}
