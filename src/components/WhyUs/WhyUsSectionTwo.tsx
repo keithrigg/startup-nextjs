@@ -1,40 +1,16 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import { brandColors } from "@/lib/brandColors";
-
-// Custom SVGs for the icons
-const DiscoverIcon = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" className="fill-current">
-    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-  </svg>
-);
-
-const DesignIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
-  </svg>
-);
-
-const DeliverIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-    <path d="M20 4h-4l-4-4-4 4H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 0l4 4h-8l4-4zm-2 12l-4-4h3V9h2v3h3l-4 4z" />
-  </svg>
-);
-
-const DriveIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-    <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zm-2-7.5l-5-5-1.41 1.41L14.17 11H7v2h7.17l-3.59 3.59L11.41 18l5-5z" />
-  </svg>
-);
+import { FaSearch, FaPencilRuler, FaRocket, FaChartLine } from "react-icons/fa";
 
 const WhyUsSectionTwo = () => {
   const List = ({ title, description, icon: Icon }) => (
     <div className="mb-6 flex items-center">
       {/* Icon in a Square */}
       <div
-        className="flex items-center justify-center w-12 h-12 rounded-lg mr-4 bg-primary bg-opacity-10 text-primary"
+        className="flex items-center justify-center w-[60px] h-[60px] rounded-lg mr-4 bg-primary bg-opacity-10 text-primary"
       >
-        <Icon />
+        <Icon size={40} />
       </div>
       {/* Text Content */}
       <p className="flex-1 text-lg font-medium text-body-color">
@@ -47,17 +23,20 @@ const WhyUsSectionTwo = () => {
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
+        {/* Title Section (Styled like Services) */}
+        <SectionTitle
+          title="Our Approach"
+          paragraph="Leverage the Inovize 4D Approach: Discover, Design, Deliver, and Drive—a proven framework to transform challenges into opportunities and achieve sustainable success."
+          center
+          mb="80px"
+        />
+
+        {/* Split Section for Image and List */}
+        <div className="flex flex-wrap items-center -mx-4">
+          {/* Left Half: Image (Center-Aligned) */}
           <div className="w-full px-4 lg:w-1/2">
-            <div className="mb-9 text-center lg:text-left">
-              <SectionTitle
-                title="Our Approach"
-                paragraph="Embrace the 4D Approach: Discover, Design, Deliver, and Drive Your Path to Success."
-                mb="44px"
-              />
-            </div>
             <div
-              className="relative mx-auto mb-12 aspect-[1/1] max-w-[400px] text-center lg:m-0"
+              className="relative mx-auto aspect-[1/1] max-w-[400px] text-center"
               data-wow-delay=".15s"
             >
               {/* Light Mode Image */}
@@ -65,41 +44,41 @@ const WhyUsSectionTwo = () => {
                 src="/images/why/inovize_4D_light.svg"
                 alt="Inovize 4D Method Infographic (Light Mode)"
                 fill
-                className="mx-auto max-w-full dark:hidden"
+                className="max-w-full dark:hidden"
               />
               {/* Dark Mode Image */}
               <Image
                 src="/images/why/inovize_4D_dark.svg"
                 alt="Inovize 4D Method Infographic (Dark Mode)"
                 fill
-                className="mx-auto max-w-full hidden dark:block"
+                className="max-w-full hidden dark:block"
               />
             </div>
           </div>
+
+          {/* Right Half: List/Bullets (Left-Aligned, Wider) */}
           <div className="w-full px-4 lg:w-1/2">
-            <div className="max-w-[470px] flex items-center h-[400px]">
-              <div className="w-full">
-                <List
-                  title="Discover"
-                  description="Uncover your challenges and goals to set a clear path."
-                  icon={DiscoverIcon}
-                />
-                <List
-                  title="Design"
-                  description="Architect a tailored solution that fits your unique needs."
-                  icon={DesignIcon}
-                />
-                <List
-                  title="Deliver"
-                  description="Build with precision for seamless, reliable results."
-                  icon={DeliverIcon}
-                />
-                <List
-                  title="Drive"
-                  description="Optimize and support to ensure long-term success."
-                  icon={DriveIcon}
-                />
-              </div>
+            <div className="max-w-[550px] mr-auto py-11">
+              <List
+                title="Discover"
+                description="Identify your core challenges and strategic goals through in-depth analysis to establish a focused roadmap."
+                icon={FaSearch}
+              />
+              <List
+                title="Design"
+                description="Create a customized solution that aligns with your business objectives and addresses your specific requirements."
+                icon={FaPencilRuler}
+              />
+              <List
+                title="Deliver"
+                description="Execute with precision to deliver high-quality, reliable solutions that integrate seamlessly into your operations."
+                icon={FaRocket}
+              />
+              <List
+                title="Drive"
+                description="Continuously optimize performance and provide ongoing support to ensure sustained growth and success."
+                icon={FaChartLine}
+              />
             </div>
           </div>
         </div>
