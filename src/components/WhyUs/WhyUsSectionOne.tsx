@@ -7,50 +7,46 @@ const WhyUsSectionOne = () => {
   return (
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Why Work With Us"
-                paragraph="Our Approach: Expertise Meets Integrity to Drive Your Success"
-                mb="44px"
-              />
+        {/* Title Section (Styled like WhyUsSectionTwo) */}
+        <SectionTitle
+          title="Why Work With Us"
+          paragraph="Our Approach: Expertise Meets Integrity to Drive Your Success"
+          center
+          mb="80px"
+        />
 
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Unmatched Expertise in iPaaS to solve complex challenges." />
-                    <List text="Customer-Centricity delivers tailored, impactful outcomes." />
-                    <List text="Purposeful Innovation for measurable, lasting results." />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Trusted Partnership ensures success at every step." />
-                    <List text="Proven Strategies to streamline operations and growth." />
-                    <List text="Future-Ready Solutions that scale with your business." />
-                  </div>
-                </div>
-              </div>
+        {/* Split Section for List and Image (Swapped) */}
+        <div className="flex flex-wrap items-center -mx-4">
+          {/* Left Half: List/Bullets (Left-Aligned) */}
+          <div className="w-full px-4 lg:w-1/2">
+            <div className="max-w-[550px] mr-auto py-20">
+              <List text="Unmatched Expertise in iPaaS to solve complex challenges." />
+              <List text="Customer-Centricity delivers tailored, impactful outcomes." />
+              <List text="Purposeful Innovation for measurable, lasting results." />
+              <List text="Trusted Partnership ensures success at every step." />
+              <List text="Proven Strategies to streamline operations and growth." />
+              <List text="Future-Ready Solutions that scale with your business." />
             </div>
+          </div>
 
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/why/WhyUs_teamPlaceholder.jpeg"
-                  alt="Team collaborating on integration solutions"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/why/WhyUs_teamPlaceholder.jpeg"
-                  alt="Team collaborating on integration solutions"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
-              </div>
+          {/* Right Half: Image (Center-Aligned) */}
+          <div className="w-full px-4 lg:w-1/2">
+            <div
+              className="relative mx-auto aspect-[25/24] max-w-[500px] text-center"
+              data-wow-delay=".15s"
+            >
+              <Image
+                src="/images/why/WhyUs_teamPlaceholder.jpeg"
+                alt="Team collaborating on integration solutions"
+                fill
+                className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none"
+              />
+              <Image
+                src="/images/why/WhyUs_teamPlaceholder.jpeg"
+                alt="Team collaborating on integration solutions"
+                fill
+                className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none"
+              />
             </div>
           </div>
         </div>
