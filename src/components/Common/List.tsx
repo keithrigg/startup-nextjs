@@ -13,12 +13,12 @@ interface ListProps {
 }
 
 const List: React.FC<ListProps> = ({ text }) => (
-  <p className="mb-5 flex items-center text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-    <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary p-2">
+  <div className="mb-5 flex items-start text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+    <span className="mr-4 flex h-[30px] w-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary p-2">
       {checkIcon}
     </span>
-    {text}
-  </p>
+    <p className="max-w-[350px]">{text}</p>
+  </div>
 );
 
 export default List;

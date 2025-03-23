@@ -22,75 +22,75 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark 
-                   md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 
-                   2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
       >
         <div className="container">
-          <div className="flex flex-wrap items-center -mx-4">
-            {/* Left Column: Text content */}
-            <div className="w-full px-4 lg:w-1/2 mb-8 lg:mb-0">
-              {/* Headline with Typewriter */}
-              <h1 className="mb-5 text-left text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl md:text-5xl">
-                Transforming Businesses with{" "}
-                <span className="inline-block">
-                  <Typewriter
-                    words={words}
-                    loop={1}
-                    cursor={true}
-                    cursorStyle="|"
-                    typeSpeed={70}
-                    deleteSpeed={50}
-                    delaySpeed={1000}
-                  />
-                </span>
-              </h1>
+          <div className="-mx-4 flex flex-wrap">
+            <div className="w-full px-4">
+              <div className="mx-auto max-w-[800px] text-center">
+                {/* Headline with Typewriter */}
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                  Transforming Businesses with
+                  <br />
+                  <span className="inline-block min-h-[60px] sm:min-h-[70px] md:min-h-[80px]">
+                    <Typewriter
+                      words={words}
+                      loop={1}
+                      cursor={true}
+                      cursorStyle="|"
+                      typeSpeed={70}
+                      deleteSpeed={50}
+                      delaySpeed={1000}
+                    />
+                  </span>
+                </h1>
 
-              {/* Subheadline (static) */}
-              <p className="mb-8 text-left text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                Expert-led consultancy and managed services for iPaaS, API-M, LCAP, Observability, App Dev, and Agentic AI.
-              </p>
+                {/* Subheadline (static) */}
+                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  Expert-led consultancy and managed services for companies seeking to modernise operations, scale efficiently, and harness AI-driven innovation.
+                </p>
 
-              {/* Key Message */}
-              <p className="mb-8 text-left text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                Founded by ex-SaaS technology leaders, we’re passionate about solving complex problems with innovative, customer-centric solutions. Our proven track record and commitment to doing the right thing set us apart.
-              </p>
+                {/* Key Message */}
+                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  Led by former SaaS technology leaders, we empower businesses to overcome complexity with tailored, innovative solutions that drive growth and efficiency.
+                  <br />
+                  Ready to transform your operations? Connect with us today.
+                </p>
 
-              {/* Buttons */}
-              <div className="flex flex-wrap items-center space-x-4">
-                {/* LinkedIn Button */}
-                <a
-                  href="https://www.linkedin.com/company/inovize"
-                  aria-label="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-sm bg-[#0077B5] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#005C82]"
-                >
-                  <svg
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    className="fill-current mr-2"
+                {/* Buttons */}
+                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 mb-12">
+                  {/* LinkedIn Button */}
+                  <a
+                    href="https://www.linkedin.com/company/inovize"
+                    aria-label="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-sm bg-[#0077B5] px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#005C82]"
                   >
-                    <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
-                  </svg>
-                  Connect
-                </a>
+                    <svg
+                      width="17"
+                      height="16"
+                      viewBox="0 0 17 16"
+                      className="fill-current mr-2"
+                    >
+                      <path d="M15.2196 0H1.99991C1.37516 0 0.875366 0.497491 0.875366 1.11936V14.3029C0.875366 14.8999 1.37516 15.4222 1.99991 15.4222H15.1696C15.7943 15.4222 16.2941 14.9247 16.2941 14.3029V1.09448C16.3441 0.497491 15.8443 0 15.2196 0ZM5.44852 13.1089H3.17444V5.7709H5.44852V13.1089ZM4.29899 4.75104C3.54929 4.75104 2.97452 4.15405 2.97452 3.43269C2.97452 2.71133 3.57428 2.11434 4.29899 2.11434C5.02369 2.11434 5.62345 2.71133 5.62345 3.43269C5.62345 4.15405 5.07367 4.75104 4.29899 4.75104ZM14.07 13.1089H11.796V9.55183C11.796 8.7061 11.771 7.58674 10.5964 7.58674C9.39693 7.58674 9.222 8.53198 9.222 9.47721V13.1089H6.94792V5.7709H9.17202V6.79076H9.19701C9.52188 6.19377 10.2466 5.59678 11.3711 5.59678C13.6952 5.59678 14.12 7.08925 14.12 9.12897V13.1089H14.07Z" />
+                    </svg>
+                    Connect
+                  </a>
 
-                {/* Contact Us Button */}
-                <Link
-                  href="#contact"
-                  className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                  scroll={false}
-                >
-                  Contact Us
-                </Link>
+                  {/* Contact Us Button */}
+                  <Link
+                    href="#contact"
+                    className="inline-block rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    scroll={false}
+                  >
+                    Contact Us
+                  </Link>
+                </div>
               </div>
-            </div>
 
-            {/* Right Column: Static Bullet Points in Two Columns */}
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="mx-auto max-w-md lg:mr-0">
+              {/* Bullet Points in Two Columns */}
+              <div className="mx-auto max-w-[800px]">
                 <div className="mx-[-12px] flex flex-wrap">
                   {/* First Column: First 3 items */}
                   <div className="w-full px-3 sm:w-1/2">

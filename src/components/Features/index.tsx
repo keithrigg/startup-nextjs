@@ -8,8 +8,8 @@ const Features = () => {
       <section id="features" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
-            title="Our Technology Pillars"
-            paragraph="Explore the core pillars of our end-to-end automation approach — ranging from seamless integration to agentic AI."
+            title="Technology Building Blocks"
+            paragraph="We specialise in cutting-edge technologies that power intelligent automation and seamless integration, enabling businesses to optimise operations, enhance connectivity, and drive innovation at scale."
             center
           />
 
