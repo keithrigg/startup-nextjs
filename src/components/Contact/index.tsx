@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 
-// If you prefer, store sitekey in NEXT_PUBLIC_TURNSTILE_SITE_KEY
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 // Define the available pillars
@@ -26,7 +25,7 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [pillars, setPillars] = useState<string[]>([]);
 
-  // Turnstile token we’ll send to the backend
+  // Turnstile token
   const [turnstileToken, setTurnstileToken] = useState("");
 
   // Render Turnstile widget explicitly once the script is loaded
@@ -57,7 +56,6 @@ const Contact = () => {
   // Handle checkbox toggles for the pillars
   const handlePillarChange = (pillar: string) => {
     setPillars((prev) => {
-      // If it's already chosen, remove it; otherwise, add it
       if (prev.includes(pillar)) {
         return prev.filter((p) => p !== pillar);
       }
@@ -69,7 +67,6 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // If there's no token yet, let user know
     if (!turnstileToken) {
       alert("Please complete the Turnstile challenge before submitting.");
       return;
@@ -230,13 +227,15 @@ const Contact = () => {
                       </label>
                       <div className="flex flex-wrap gap-4">
                         {AVAILABLE_PILLARS.map((p, idx) => (
-                          <label key={idx} className="flex items-center text-sm text-dark dark:text-white">
+                          <label
+                            key={idx}
+                            className="flex items-center text-sm text-dark dark:text-white"
+                          >
                             <input
                               type="checkbox"
                               className="mr-2"
                               checked={pillars.includes(p)}
                               onChange={() => {
-                                // toggle the pillar in local state
                                 if (pillars.includes(p)) {
                                   setPillars((prev) => prev.filter((val) => val !== p));
                                 } else {
@@ -276,22 +275,24 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  {/* Turnstile widget & Submit button side-by-side */}
-                  <div className="w-full px-4 mb-6 flex items-center justify-between gap-4">
-                    {/* Turnstile widget container */}
-                    <div id="turnstile-widget" style={{ minHeight: "80px" }}>
-                      {/* The widget will be rendered here in useEffect */}
-                    </div>
+                  {/* Turnstile widget & Submit button */}
+                  <div className="w-full px-4 mb-6">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                      {/* Turnstile widget container */}
+                      <div id="turnstile-widget" style={{ minHeight: "80px" }}>
+                        {/* The widget will be rendered here in useEffect */}
+                      </div>
 
-                    {/* Submit Button */}
-                    <button
-                      type="submit"
-                      className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white 
-                                 shadow-submit duration-300 hover:bg-primary/90 
-                                 dark:shadow-submit-dark"
-                    >
-                      Submit Enquiry
-                    </button>
+                      {/* Submit Button */}
+                      <button
+                        type="submit"
+                        className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white 
+                                   shadow-submit duration-300 hover:bg-primary/90 
+                                   dark:shadow-submit-dark"
+                      >
+                        Submit Enquiry
+                      </button>
+                    </div>
                   </div>
                 </div>
               </form>

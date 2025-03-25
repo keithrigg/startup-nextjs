@@ -6,6 +6,7 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
+import PowerSection from "@/components/Power";
 import Pricing from "@/components/Pricing";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -25,6 +26,7 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
+      <PowerSection />
       <Features />
       <Brands />
       <Services />
