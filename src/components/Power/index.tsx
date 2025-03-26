@@ -23,7 +23,7 @@ const bulletPoints = [
       "Rapid application development for faster delivery of new products and features.",
   },
   {
-    title: "Drive Data-Driven Decisions",
+    title: "Data-Driven Decisions",
     description:
       "Actionable insights through integrated analytics, powering more confident choices.",
   },

@@ -277,9 +277,13 @@ const Contact = () => {
 
                   {/* Turnstile widget & Submit button */}
                   <div className="w-full px-4 mb-6">
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    {/* 
+                      Force row layout on large screens (sm+)
+                      and vertically center the items 
+                    */}
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 min-h-[80px]">
                       {/* Turnstile widget container */}
-                      <div id="turnstile-widget" style={{ minHeight: "80px" }}>
+                      <div id="turnstile-widget" className="flex items-center">
                         {/* The widget will be rendered here in useEffect */}
                       </div>
 
@@ -287,8 +291,8 @@ const Contact = () => {
                       <button
                         type="submit"
                         className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white 
-                                   shadow-submit duration-300 hover:bg-primary/90 
-                                   dark:shadow-submit-dark"
+                                  shadow-submit duration-300 hover:bg-primary/90 
+                                  dark:shadow-submit-dark"
                       >
                         Submit Enquiry
                       </button>
