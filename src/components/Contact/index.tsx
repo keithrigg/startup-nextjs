@@ -119,7 +119,7 @@ const Contact = () => {
                 Need Help? Have a Project in Mind?
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Submit your enquiry below and our team of experts will get back to you ASAP.
+                Submit your enquiry below and our team of experts will get back to you.
               </p>
 
               {/* Contact Form */}
@@ -223,7 +223,7 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <div className="mb-8">
                       <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                        Which technology pillars are you interested in?
+                        Which technologies are you interested in?
                       </label>
                       <div className="flex flex-wrap gap-4">
                         {AVAILABLE_PILLARS.map((p, idx) => (

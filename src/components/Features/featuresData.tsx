@@ -29,7 +29,7 @@ const featuresData: Feature[] = [
     ),
     title: "API Management",
     paragraph:
-      "Manage APIs for secure, scalable connectivity by implementing robust governance, security protocols, and performance monitoring, ensuring your systems can communicate efficiently and support a modular, service-oriented architecture.",
+      "Manage APIs for secure, scalable connectivity by implementing robust governance, security protocols, and performance monitoring, ensuring your systems can communicate efficiently and support a modular, service-orientated architecture.",
   },
   {
     id: 3,

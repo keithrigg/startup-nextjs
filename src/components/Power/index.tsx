@@ -23,9 +23,9 @@ const bulletPoints = [
       "Rapid application development for faster delivery of new products and features.",
   },
   {
-    title: "Data-Driven Decisions",
+    title: "Data-Led Decisions",
     description:
-      "Actionable insights through integrated analytics, powering more confident choices.",
+      "Actionable insights through integrated analytics, empowering confident choices.",
   },
   {
     title: "Boost Agility",
@@ -41,8 +41,6 @@ const bulletPoints = [
 
 const PowerSection = () => {
   // By default, show 3 slides on large screens, 2 on tablets, 1 on mobile.
-  // We'll set autoplaySpeed = 7000 (7s) for large screens to slow it down.
-  // For smaller breakpoints, we keep it at 5000 (5s).
   const settings = {
     dots: true,
     infinite: true,
@@ -53,21 +51,19 @@ const PowerSection = () => {
     autoplaySpeed: 10000, // slower on large screens
     responsive: [
       {
-        // Below 1024px (tablet size and down)
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          autoplaySpeed: 5000, // keep the existing speed on medium screens
+          autoplaySpeed: 5000,
         },
       },
       {
-        // Below 640px (mobile)
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplaySpeed: 5000, // same as above for mobile
+          autoplaySpeed: 5000,
         },
       },
     ],
@@ -100,12 +96,20 @@ const PowerSection = () => {
         </Slider>
       </div>
 
-      {/* Force slick-dots to be white */}
+      {/* Override slick-dots and arrow styles for light and dark mode */}
       <style jsx global>{`
-        .slick-dots li button::before {
-          color: #fff !important;
+        /* Light Mode: dots and arrows in black */
+        .slick-dots li button::before,
+        .slick-dots li.slick-active button::before,
+        .slick-prev:before,
+        .slick-next:before {
+          color: #000 !important;
         }
-        .slick-dots li.slick-active button::before {
+        /* Dark Mode: dots and arrows in white */
+        .dark .slick-dots li button::before,
+        .dark .slick-dots li.slick-active button::before,
+        .dark .slick-prev:before,
+        .dark .slick-next:before {
           color: #fff !important;
         }
       `}</style>
