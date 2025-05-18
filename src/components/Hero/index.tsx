@@ -39,9 +39,9 @@ const Hero = () => {
               tailored Intelligent Automation solutions.
               <br />
               <br />
-              Ready to Elevate Your Business?
+              Ready to elevate your business?
               <br />
-              Let’s Start Your Transformation Journey Today.
+              Begin your transformation journey with us today.
             </p>
 
             {/* Buttons */}
