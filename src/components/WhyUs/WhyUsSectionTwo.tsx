@@ -67,14 +67,14 @@ const WhyUsSectionTwo = () => {
               <div className="relative mx-auto aspect-[1/1] max-w-[500px] lg:mr-0">
                 {/* Light Mode Image */}
                 <Image
-                  src="/images/why/inovize_4D_light2.svg"
+                  src="/images/why/Inovize_4D_approach_cycle.svgg"
                   alt="Inovize 4D Method Infographic (Light Mode)"
                   fill
                   className="mx-auto max-w-full drop-shadow-three dark:hidden"
                 />
                 {/* Dark Mode Image */}
                 <Image
-                  src="/images/why/inovize_4D_dark.svg"
+                  src="/images/why/Inovize_4D_approach_cycle.svg"
                   alt="Inovize 4D Method Infographic (Dark Mode)"
                   fill
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block"
