@@ -74,7 +74,7 @@ const WhyUsSectionTwo = () => {
                 />
                 {/* Dark Mode Image */}
                 <Image
-                  src="/images/why/Inovize_4D_approach_cycle.svg"
+                  src="/images/why/Inovize_4D_approach_cycle_dark.svg"
                   alt="Inovize 4D Method Infographic (Dark Mode)"
                   fill
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block"
